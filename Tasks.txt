@@ -1,0 +1,160 @@
+- creating router (done)
+
+Login
+- login page (done)
+- add api to login page (done)
+
+Project 
+- list Projects (done)
+- navigation to the project page (done)
+
+HOME
+- create home page (done)
+- add elements to the home page as per the previous code (done)
+- divide the home page in components  (done)
+- Add toggle nav functionality (done)
+- add the orthoLayer from backend (done)
+
+- make the orthoLayer dynamic as per the previous chages (done)
+- Scroll in effect on othoLayers (done)
+- add line vector (done)
+- add polygon vector (done)
+
+- add pin vector  (done)
+- create annotation context(done)
+- create map context (done)
+- view annotation details (done)
+- show vecotr annotation on map (done)
+
+- Center to map when vector item clicked from backend (done)
+- handle close editOptions to show select text (done)
+- add pin (done)
+- show pin details from backend (done) 
+- when pin added show an icon (done)
+- fetch Annotation as per the OrthoLayers (done)
+- delete vector annotations (done) 
+- add center to map when drawend for pin (done)
+
+- show details when drawend localy (done)
+- add annotation after drawend localy (done)
+- send polygon and line to backend (done)
+- send pin to backend (done)
+- change map to uts map (done)
+- checkBox functionality of Annotations (done)
+- Edit line and Polygon stroke color (done)
+- Edit Polygon fill color (done)
+- Edit Polygon scroll opacity (done)
+- update vector details and send to backend (done)
+- on slecte change color (done)
+
+- create a user context for login authentication (done)
+- if User is not loggedIn then it would not access any links if he tries to do it then it will show the login page only (done)
+- Login authentication. Means if user loggedIN then send it to projects (done)
+- add kml and kmz file (done)
+- add shz and shp file (done)
+- add dxf file (done)
+- when kml, kmz loaded send it to backend (done)
+- when shp, shz loaded send it to backend (done)
+- when dwg and dxf file send it to backend (done)
+
+- fetch shz and shp file from backend (done)
+- fetch kml and kmz file from bacend (done)
+- fetch dwg and dxf file from backend (done)
+- add kml, kmz file to annotation list (done)
+- add shp, shz file to annotation list (done)
+- add shz file to annotation list (done)
+
+- show detials of kml, kmz files to editOptions (done)
+- show detials of dxf files to editOptions (done)
+
+- show detials of shp, shz files to editOptions (done)
+- measurement tooltip (done)
+- responsive design (done)
+- remove style when deselect (done)
+- lat long on hover (done)
+- lat long on click (done)
+- project name on top (done)
+- measurement type (done)
+- correct the measurement (done)
+
+- lable renaming (done)
+- when new annotation is made update the ortho with a fetch request (done)
+- fetch cogfile of orhtoLayer as per the layer clicked (done)
+- when annoation switched then the source should be empty and new style should be applied (done)
+
+
+COMPARE
+- compare functionality with 2 divs (done)
+- show maps on both divs of the compare side (done)
+- zoom in/out and drag sync in both maps (done)
+- routing with orthoid (done)
+- fetch both annotations of orthoId from params (done)
+
+- fetch orhtoImage on both maps of their relative map (done)
+- show annotations on both map (done)
+- Nav and navigation (done)
+- create the ui to show the annotation list in the left sid (done)
+- show annotation list of both maps (done)
+- checkbox functionality in annoation list as per the map (done)
+- choose differet ortho by date and route them (done)
+- show edit detials functionality (done)
+- edit selected option form compare page (done)
+
+- load the file in frontend when uploaded (done)
+- drawing are getting under the kml file (done)
+- chage open street map (done)
+
+- vector in annotation (done)
+- files in layers (done)
+- othor scroll to latest (done)
+
+- escape (done)
+- not removItem issuse (done )
+- when the file is added then it's showing in different orhtos annotations also  (done)
+- not able to save same type of layer one after another (done)
+
+- add home navigation On project (done) 
+- only select kml, kmz,dxf, shp,shz files in drag and drop also in choose file (done) 
+- not able to get kml in the first load (done)
+- on first load auto select the recent project (done) chagne logic of the getAllProjectWithLastestOrtho.
+- exit navigation to the previous project and it's ortho (done)
+- click active on the div not the name of annotation item (done)
+- sidenav on click add styling (done)
+
+- editable drawing saving in backend (done)
+- get converted measurements of drawing from the backends (done)
+
+- editable pin and saving in backend (done)
+
+- editable sidenav with scroll (done)
+- file layer and not hiding (done)
+- add scrolable in compare (done)
+
+- show annotations name and mesaurements
+   PROJECT
+- when click on layer other than pin the pin icon get's removed (done)
+    - create measurement overlay (done)
+    - when delete the annotaion also delete it's overlay (done)
+    - when hide also hide teh overlay (done)
+    - on hover and on measurement click item show names (done)
+    - add the overlay when the data is comming from backend (done)
+    - update the overlay position after the feature is updated (done)
+   COMPRARE
+    - add the overlay when the data is comming from backend (done)
+    - on measurement click item show names (done)
+    - when hide also hide teh overlay (done)
+- delete all the layer which featureId matches (done)
+
+- sidenav ui (done)
+- full width for the compare annotation list (done)
+- set edit option empty when every click on other things like:- compare button, navigatin back, different date, delete handler of same id. (done)
+
+- when clicked on compare nav the styling of the other's are not removing (removed the compare sidenav)
+- chavaron on the compare of the right side's width is not working porperly when the measurements are cliked (removed the compare sidenav)
+
+
+
+
+
+when modify change the measurements 
+overlay mesaurements are not correct for polygon

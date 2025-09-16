@@ -1,0 +1,108 @@
+/*
+=====================================================
+--- 1. THEME VARIABLES ---
+=====================================================
+*/
+:root {
+  /* This is your consistent application theme */
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #374151;
+  --border-primary: #4b5563;
+  --highlight: #3b82f6;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent: #f59e0b; /* A modern gold/amber color */
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/*
+=====================================================
+--- 2. MAIN CONTAINER & IMAGES ---
+=====================================================
+*/
+.img-comp-container {
+  position: relative;
+  height: calc(100vh - 48px); /* Full height minus the nav */
+  width: 100%;
+  background-color: var(--bg-primary);
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* These are the containers for your OpenLayers maps */
+.compare-item,
+.compare-item2 {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+=====================================================
+--- 3. SLIDER & BUTTON ---
+=====================================================
+*/
+.img-comp-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  cursor: ew-resize; /* East-West resize cursor */
+  width: 4px;
+  /* UPDATED: Use a brighter, more visible color for the slider */
+  background-color: var(--text-primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* Increased size for better usability */
+  height: 32px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 50%; /* Make it circular for a modern look */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* Center the button on the slider line */
+  transform: translate(-50%, -50%);
+}
+
+.slider-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 14px;
+  gap: 2px;
+}
+
+/*
+=====================================================
+--- 4. ANNOTATION NUMBER BADGE ---
+=====================================================
+*/
+.a-compare-number {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.3rem 0.6rem;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}

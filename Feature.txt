@@ -1,0 +1,43 @@
+- Login 
+- List of Projects 
+
+PROJECT PAGE
+- Project name
+- List of Ortho as per data 
+- scroll the list of ortho
+- on the bottom their are lat lon text which is chaged as per the mouse moved
+- and when the mouse is clicked on the map their lat long is show at the side also.
+- When a ortho is clicked thier representative annotation will be listed at the annotation list
+- their are four tooltip:- cursor, polygon, line, and pin.
+- when you select hte line option user can draw a line on the map.
+- and when select the polygon the user can draw the polygon.
+- and when select the pin user can add the pin icon on the map.
+- when the user is completed their drawing the drawing will be shown on the annoation list.
+- when click on cursor tooltip user can move around the map 
+- in annotation list user can hide and show the annotation.
+- when the user is clicked on the polygon annoation thier edit option will be shown on the right side.
+- on the edit option user can get the lat long of the annoation and edit the annoation name, line and fill or opacity when it's a polygon. 
+- user also have the option to delete the annotation.
+- also when drawing user chnage the unit of measurement from the bottom left of the website.
+- on the top in navbar user also get the option to upload the kml, kmz, shp, shz, dxf file 
+- use can also drag and drop the files on website.
+- on upload user can see their files loaded on map
+- also the file will be added to the list of annotation on the left.
+- when cliked on the file annoations user can change their name and user can see their feature data on the right side in edit options.
+- on second nav thier is a compare button which route you to the compare page.
+- edit annoation and the data will save automatically
+- when hover on the drawings it will show it's measurements
+- adjustable sibe-bars
+
+
+COMPARE
+- user can compare the annoation of 2 different Ortho.
+- on left side thier are 2 annoation list as the for each ortho.
+- user can change the annoation list by chaging the date and fetch their representative annoation.
+
+- when the user is clicked on the annoation thier edit option will be shown on the right side.
+- on the edit option user can get the lat long of the annoation and edit the annoation name, line and fill or opacity when it's a polygon. 
+- when cliked on the file annoations user can change their name and user can see `their feature data on the right side in edit options.
+- on the middle their is a slider in which user can compre both the ortho and thier annoations.
+- when hover on the drawings it will show it's measurements
+- adjustable sibe-bars

@@ -1,0 +1,257 @@
+/*
+=====================================================
+--- 1. THEME VARIABLES & GLOBAL STYLES ---
+=====================================================
+*/
+:root {
+  /* This is your consistent application theme */
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #374151;
+  --border-primary: #4b5563;
+  --highlight: #3b82f6;
+  --highlight-hover: #2563eb;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent: #f59e0b; /* A modern gold/amber color */
+}
+
+/* Themed scrollbar for the entire page */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-primary);
+  border-radius: 10px;
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-primary) var(--bg-primary);
+}
+
+/*
+=====================================================
+--- 2. MAIN LAYOUT & NAV ---
+=====================================================
+*/
+.compare-main {
+  display: flex;
+  height: calc(100vh - 48px); /* Full height minus the nav */
+}
+
+/* Your original Nav styles, re-themed */
+.compare-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* UPDATED: Use a consistent background */
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  height: 48px;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--border-primary);
+}
+.compare-nav-sec {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+.compare-nav-sec:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/*
+=====================================================
+--- 3. ANNOTATION SIDEBAR ---
+=====================================================
+*/
+.annotation-div-compare {
+  width: 25%;
+  min-width: 300px; /* Prevent it from getting too small */
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--border-primary);
+  display: grid;
+  flex-direction: column;
+}
+
+.number-n-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-primary);
+  flex-shrink: 0; /* Prevent this section from shrinking */
+}
+.compare-number {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.compare-blank-div {
+  height: 7px;
+  width: 100%;
+  background-color: var(--bg-primary);
+}
+/* This is the main list area that will scroll */
+.comprae-annotation-list {
+  padding: 0.5rem 1rem;
+  padding-right: 0;
+  background-color: var(--bg-primary);
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.comprae-annotation-list #measurements,
+.comprae-annotation-list #layers {
+  color: var(--text-primary);
+}
+
+/* Each of the two annotation sections */
+.compare-annotaiton-section {
+  height: calc(50vh - 44px - 31px);
+  margin-bottom: 1.5rem;
+}
+
+/* The dropdown select element */
+.compare-select {
+  width: 100%;
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  padding: 0.6rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+}
+.compare-select:focus {
+  outline: none;
+  border-color: var(--highlight);
+}
+
+/* This was an unused style in your original file */
+.compare-blank-div {
+  display: none;
+}
+
+/*
+=====================================================
+--- 4. MAP & SWIPE CONTROLS ---
+=====================================================
+*/
+#map1 {
+  position: relative; /* Ensure the map container can position child elements */
+}
+
+/* Styling for the OpenLayers Swipe control */
+.ol-swipe {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.ol-swipe.ol-swipe-vertical {
+  width: 6px !important;
+  cursor: ew-resize !important;
+}
+.ol-swipe.ol-swipe-horizontal {
+  height: 6px !important;
+  cursor: ns-resize !important;
+}
+
+/* Style for the handle inside the swipe control */
+.ol-swipe-strip {
+  background-color: #3b82f6 !important; /* Use your highlight color */
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Icons inside the handle */
+.ol-swipe-strip:before,
+.ol-swipe-strip:after {
+  color: white;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+}
+.ol-swipe-vertical .ol-swipe-strip:before {
+  content: "\f053"; /* Font Awesome left arrow */
+  margin-right: 2px;
+}
+.ol-swipe-vertical .ol-swipe-strip:after {
+  content: "\f054"; /* Font Awesome right arrow */
+  margin-left: 2px;
+}
+.ol-swipe-horizontal .ol-swipe-strip:before {
+  content: "\f077"; /* Font Awesome up arrow */
+  margin-bottom: 2px;
+}
+.ol-swipe-horizontal .ol-swipe-strip:after {
+  content: "\f078"; /* Font Awesome down arrow */
+  margin-top: 2px;
+}
+
+
+/* Styling for the new date labels */
+.compare-label-left,
+.compare-label-right {
+  position: absolute;
+  top: 10px;
+  background-color: rgba(17, 24, 39, 0.8); /* var(--bg-primary) with opacity */
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border-primary);
+  z-index: 10;
+}
+
+.compare-label-left {
+  left: 10px;
+}
+
+.compare-label-right {
+  right: 10px;
+}
+
+/* Styling for the orientation toggle button */
+.orientation-toggle-btn {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Ensure it's above the map canvas */
+  padding: 8px 16px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.orientation-toggle-btn:hover {
+  background-color: var(--bg-tertiary);
+}

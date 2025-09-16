@@ -1,0 +1,272 @@
+/* --- Global Variables for Consistency --- */
+:root {
+  --nav-bg: rgba(31, 41, 55, 0.8); /* bg-gray-800 with opacity for blur */
+  --nav-border: #4b5568; /* border-gray-500 */
+  --button-bg: #111827; /* bg-gray-900 */
+  --button-border: #374151; /* border-gray-700 */
+  --button-hover: #1f2937; /* hover:bg-gray-800 */
+  --text-primary: #e5e7eb; /* text-gray-300 */
+  --text-secondary: #9ca3af; /* text-gray-400 */
+  --logout-confirm: #e53e3e; /* The red from the image */
+  --logout-confirm-hover: #dc2626;
+  --cancel-bg: #4b5563; /* The gray from the image */
+  --cancel-hover: #6b7280;
+}
+
+/* --- Main Navbar Styling --- */
+.navbar {
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--nav-border);
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20; /* Navbar has a z-index of 20 */
+}
+
+.navbar-container {
+  max-width: 1560px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Left Side: Logo & Project Info --- */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-logo {
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 2rem;
+  width: auto;
+}
+
+.project-info {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-primary);
+}
+.project-name,
+.project-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.separator-icon {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+/* --- Right Side: Actions --- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.welcome-message {
+  display: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.user-icon-mobile {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+}
+
+.nav-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: var(--text-primary);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--button-hover);
+}
+
+.nav-button .nav-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.button-text {
+  display: none;
+}
+
+/* --- File Input --- */
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.file-input-hidden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* --- Responsiveness (sm breakpoint at 640px) --- */
+@media (min-width: 640px) {
+  .navbar-right {
+    gap: 1rem;
+  }
+  .welcome-message,
+  .button-text {
+    display: inline;
+  }
+  .user-icon-mobile {
+    display: none;
+  }
+  .project-info {
+    display: flex;
+  }
+}
+
+/* 
+=====================================================
+--- Logout Modal Styling ---
+=====================================================
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #2d3748;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: var(--text-primary);
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-button {
+  padding: 0.6rem 0;
+  min-width: 110px;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-button.cancel {
+  background-color: var(--cancel-bg);
+}
+.modal-button.cancel:hover {
+  background-color: var(--cancel-hover);
+}
+
+.modal-button.confirm {
+  background-color: var(--logout-confirm);
+}
+.modal-button.confirm:hover {
+  background-color: var(--logout-confirm-hover);
+}
+
+/* 
+=====================================================
+--- NEW Dataset Dropdown Styling for Portal ---
+=====================================================
+*/
+.dropdown-wrapper {
+  /* This is no longer a positioning anchor, just a flex container for the button */
+  display: flex;
+}
+
+.dropdown-menu {
+  /* Use fixed positioning to break out of all parent containers */
+  position: fixed;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: 0.5rem;
+  width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  /* Give it a high z-index to appear on top of everything */
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 0.25rem;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+.dropdown-item:hover {
+  background-color: var(--button-hover);
+  color: white;
+}
